@@ -8,7 +8,7 @@ pipeline {
         AWS_REGION_SECONDARY = 'us-west-2'
         // <<< UPDATE THESE LINES WITH THE ACTUAL BUCKET NAMES FROM YOUR main.tf >>>
         S3_BUCKET_PRIMARY = 'your-unique-primary-bucket-name-12345' // <-- REPLACE THIS
-        S3_BUCKET_SECONDARY = 'your-unique-primary-bucket-name-67890' // <-- REPLACE THIS
+        S3_BUCKET_SECONDARY = 'your-unique-secondary-bucket-name-67890' // <-- REPLACE THIS
         AWS_CREDENTIALS_ID = 'aws-credentials-for-jenkins'
     }
 
