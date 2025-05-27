@@ -8,16 +8,12 @@ pipeline {
         AWS_REGION_SECONDARY = 'us-west-2'
         S3_BUCKET_PRIMARY = 'your-unique-primary-bucket-name-12345' // <<< IMPORTANT: Use your actual S3 bucket name from main.tf
         S3_BUCKET_SECONDARY = 'your-unique-secondary-bucket-name-67890' // <<< IMPORTANT: Use your actual S3 bucket name from main.tf
-        AWS_CREDENTIALS_ID = 'aws-credentials-for-jenkins' // This should match the ID you gave to your AWS credentials in Jenkins
+        AWS_CREDENTIALS_ID = 'aws-credentials-for-jenkins'
     }
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                // Ensure this URL matches your actual GitHub repository
-                git branch: 'main', url: 'https://github.com/your-github-username/your-repository-name.git' // <<< IMPORTANT: Update with your repo details
-            }
-        }
+        // THE PREVIOUS 'Checkout Code' STAGE HAS BEEN REMOVED
+        // Jenkins handles the checkout automatically when you configure the job.
 
         stage('Build Application') {
             steps {
